@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>отправляем ajax</title>
+	<meta charset="utf-8">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+
+</head>
+<body>
+<h1>AJAX page</h1>
+
+<script type="text/javascript">
+  /* Данная функция создаёт кроссбраузерный объект XMLHTTP */
+  
+</script>
+<div>
+  <input type="button" value="Отправить" onclick="send()" />
+  <div id="yandex"></div>
+</div>
+<div id="yandex2">
+	
+</div>
+
+
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="mO+3GQlVvyMvuE0WCY5d5/7gKJiih1C2UxOSCsXE4KDDMJ9I4z+LAUmK8lRWRDmpwU6KqBJ4lDGOjqd6qmakcIq5K/rb+v4jstsPwdTO0CELVUCqjei7wDtt2lxUSgCcLZBc1G+DC1JjDjwHK7fCfVq4t3gZFULgcYWUCC6nscmouQle3TN/9JlJiTwCAbKJ" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CD85D8D2" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="8lHAaEhL/skCs1v/n2o0f+Kb+9i7REyoxDoTVf1eK6yLB654AH9kZS/Jm2kddQVMjaA0s5u2lty1nixihDf/NFY6WmWcCUjbgrC3oKnMFOom/hYxfpYJ6UtIYAZKBf2D6Pb2KMUI0e0PclyhcmglhXyGK2/Xi9g5fSCHuiQN4dKBh2vOw4PmJC6gbi3JzDHp" />
+
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+     // collect value of input field
+     $name = $_POST['fname']; 
+     if (empty($name)) {
+         echo "Name is empty";
+     } else {
+         echo $name;
+     }
+}
+?>
+
+</body>
+</html>

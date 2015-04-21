@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>тренировка ajax</title>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    
+
+</head>
+<body>
+<script>
+$(document).ready(function() {
+    anchors();
+});
+function anchors() {
+    $("a.anchor").each(function() {
+        $(this).click(function() {
+            var a = $(this).attr('href').split('#')[1];
+            if(a) loadAnchor(a);
+        }).removeAttr('anchor');
+    });
+    
+    var url = document.location.toString();
+    var a = url.split('#')[1];
+    if(a) loadAnchor(a);
+}
+function loadAnchor(a) {
+    $.get(a,null, function(html){ 
+        $("#results").html(html);  
+    });
+}
+</script>
+
+<h1>Anchor Based URL Navigation</h1><br />
+<a href='#test1.html' class='anchor'>Обо мне</a>
+<a href='#test2.html' class='anchor'>Блог</a>
+
+<div id="results"></div>
+
+</body>
+</html>
